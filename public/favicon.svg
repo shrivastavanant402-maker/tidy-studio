@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="agent-grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="45%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="core-glow" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#c7d2fe" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Rounded Base Plate -->
+  <rect width="64" height="64" rx="16" fill="url(#agent-grad)" />
+  
+  <!-- Inner Border Ring -->
+  <rect x="3" y="3" width="58" height="58" rx="14" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
+  
+  <!-- Neural / Sparkle Agent Star Core -->
+  <path d="M32 14L35.8 25.2L47 29L35.8 32.8L32 44L28.2 32.8L17 29L28.2 25.2L32 14Z" fill="url(#core-glow)" filter="url(#glow)" />
+  
+  <!-- Outer Satellite Nodes (Data Refinement Points) -->
+  <circle cx="19" cy="46" r="3.5" fill="#38bdf8" />
+  <circle cx="45" cy="46" r="3.5" fill="#e0e7ff" />
+  <circle cx="47" cy="18" r="2.5" fill="#ffffff" />
+  <circle cx="17" cy="18" r="2.5" fill="#38bdf8" />
+  
+  <!-- Data Conduits -->
+  <path d="M21.5 43.5L28.5 35.5" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2" />
+  <path d="M42.5 43.5L35.5 35.5" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2" />
+  <path d="M32 44V51" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <circle cx="32" cy="51" r="2" fill="#38bdf8" />
+</svg>
